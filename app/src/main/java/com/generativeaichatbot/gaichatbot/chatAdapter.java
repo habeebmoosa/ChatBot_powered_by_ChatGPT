@@ -1,4 +1,4 @@
-package com.example.chatbot;
+package com.generativeaichatbot.gaichatbot;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,8 +13,17 @@ import java.util.List;
 
 public class chatAdapter extends RecyclerView.Adapter<chatAdapter.MyViewHolder>{
     List<Message> messageList;
+    private OnItemLongClickListener onItemLongClickListener;
     public chatAdapter(List<Message> messageList) {
         this.messageList = messageList;
+    }
+
+    public void setOnItemLongClickListener(OnItemLongClickListener listener) {
+        this.onItemLongClickListener = listener;
+    }
+
+    public interface OnItemLongClickListener {
+        public boolean onItemLongClicked(int position);
     }
 
     @NonNull
@@ -28,6 +37,7 @@ public class chatAdapter extends RecyclerView.Adapter<chatAdapter.MyViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
          Message message = messageList.get(position);
+
          if(message.getSendBy().equals(Message.SEND_BY_USER)){
               holder.leftChatView.setVisibility(View.GONE);
               holder.rightChatView.setVisibility(View.VISIBLE);
@@ -37,6 +47,16 @@ public class chatAdapter extends RecyclerView.Adapter<chatAdapter.MyViewHolder>{
              holder.leftChatView.setVisibility(View.VISIBLE);
              holder.leftTextView.setText(message.getMessage());
          }
+
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                if (onItemLongClickListener != null) {
+                    return onItemLongClickListener.onItemLongClicked(position);
+                }
+                return false;
+            }
+        });
     }
 
     @Override

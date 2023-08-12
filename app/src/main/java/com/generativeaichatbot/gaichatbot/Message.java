@@ -1,4 +1,4 @@
-package com.example.chatbot;
+package com.generativeaichatbot.gaichatbot;
 
 public class Message {
     public static String SEND_BY_USER = "user";

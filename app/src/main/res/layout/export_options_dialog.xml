@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    >
+
+    <Button
+        android:id="@+id/copy_response_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copy"
+        android:background="@drawable/rounded_msg"
+        android:layout_marginBottom="8dp"
+    />
+    <Button
+        android:id="@+id/pdf_response_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Export as PDF"
+        android:background="@drawable/rounded_msg"
+        android:layout_marginBottom="8dp"
+    />
+    <Button
+        android:id="@+id/doc_response_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Export as Doc"
+        android:background="@drawable/rounded_msg"
+    />
+</LinearLayout>

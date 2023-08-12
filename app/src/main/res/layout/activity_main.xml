@@ -11,7 +11,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="58dp"
+        android:layout_marginBottom="64dp"
         android:backgroundTint="#343541"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,27 +22,44 @@
         android:id="@+id/inputMessage"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/rounded_corner"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:background="@drawable/rounded_msg"
         android:ems="10"
         android:hint="@string/message"
         android:inputType="textPersonName"
-        android:paddingLeft="12dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageButton"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="80dp"
         android:layout_height="50dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="6dp"
         android:background="@drawable/rounded_corner"
         android:backgroundTint="#343541"
         android:contentDescription="@string/this_button_is_used_to_send_the_query_to_the_api"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_menu_send" />
+
+    <ImageButton
+        android:id="@+id/speechBtn"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/rounded_corner"
+        android:backgroundTint="#343541"
+        android:contentDescription="@string/this_button_is_used_to_speech"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_mic_btn_light" />
 </androidx.constraintlayout.widget.ConstraintLayout>

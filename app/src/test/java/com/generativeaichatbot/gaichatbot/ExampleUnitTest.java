@@ -1,4 +1,4 @@
-package com.example.chatbot;
+package com.generativeaichatbot.gaichatbot;
 
 import org.junit.Test;
 

@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">ChatBot</string>
+    <string name="app_name">G-AI ChatBot</string>
     <string name="message">Message</string>
     <string name="api_key">Api Key</string>
     <string name="this_button_is_used_to_send_the_query_to_the_api">This button is used to send the query to the API</string>
+    <string name="this_button_is_used_to_speech">This button is used to speech</string>
+    <string name="turn_on_off">Turn On Off</string>
 </resources>
